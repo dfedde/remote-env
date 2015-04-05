@@ -1,0 +1,11 @@
+#!/bin/bash
+wrapdocker
+/etc/init.d/ssh start
+
+# build the user
+useradd remote_env
+chsh -s /bin/remote-env remote_env
+
+echo "remote_env:sfsrocks" | chpasswd
+
+tail -f runner
