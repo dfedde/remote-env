@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo 
-echo "Hello and welcome to my docker class"
+echo "Hello and welcome to my ruby class"
 echo "This interface is so that users don't"
-echo "need to install docker on their computer"
+echo "need to install ruby on their computer"
 echo "and can still participate"
 echo 
 echo "please fill out this info so we can proceed"
@@ -11,10 +11,9 @@ echo
 echo "name [A-Za-z]:"
 read name
 
-
 docker run -it -d --name="$name" matryoshka
 if [ $? -ne 0 ]
 then
   echo "looks like you already have a container I'll put you in it"
 fi
-exec docker exec -it $name /bin/bash
+exec docker exec -ti $name script -q -c "/bin/bash" /dev/null
