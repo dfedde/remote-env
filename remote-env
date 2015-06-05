@@ -11,7 +11,7 @@ echo
 echo "name [A-Za-z]:"
 read name
 
-docker run -it -d --name="$name" matryoshka
+docker run -it -d --name="$name" ruby_class
 if [ $? -ne 0 ]
 then
   echo "looks like you already have a container I'll put you in it"
