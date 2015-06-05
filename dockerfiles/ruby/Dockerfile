@@ -7,4 +7,6 @@ RUN apt-get update
 RUN apt-get install -y --force-yes tmux vim nano
 RUN apt-get clean
 
+ENV PATH /usr/local/bundle/bin:$PATH
+
 
