@@ -16,4 +16,4 @@ if [ $? -ne 0 ]
 then
   echo "looks like you already have a container I'll put you in it"
 fi
-exec docker exec -ti $name script -q -c "/usr/bin/tmux a || /usr/bin/tmux new" /dev/null
+exec docker exec -ti $name script -q -c "/bin/runner" /dev/null

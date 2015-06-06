@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir ruby_class
+cd ruby_class
+export PATH=/usr/bin/bundle/bin:$PATH
+/usr/bin/tmux a || /usr/bin/tmux new
